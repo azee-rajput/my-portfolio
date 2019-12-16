@@ -1,0 +1,69 @@
+  .bgMain{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .bgMain i{
+    position: absolute;
+    display: block;
+    color: rgba(255, 255, 255, 0.2);
+    animation: animate 30s linear infinite;
+    bottom: -150px;
+  }
+  
+  .bgMain i:nth-child(1){
+    left: 86%;
+    font-size: 8em;
+    animation-delay: 0s;
+    animation-duration: 7s;
+  }
+  .bgMain i:nth-child(2){
+    left: 12%;
+    font-size: 6em;
+    animation-delay: 0s;
+    animation-duration: 12s;
+  }
+  .bgMain i:nth-child(3){
+    left: 70%;
+    font-size: 10em;
+    animation-delay: 0s;
+  }
+  .bgMain i:nth-child(4){
+    left: 4%;
+    font-size: 3em;
+    animation-delay: 0s;
+    animation-duration: 4s;
+  }
+  .bgMain i:nth-child(5){
+    left: 65%;
+    font-size: 6em;
+    animation-delay: 0s;
+    animation-duration: 15s;
+  }
+  
+  .bgMain i:nth-child(6){
+    left: 15%;
+    font-size: 12em;
+    animation-duration: 5s;
+  }
+  .bgMain i:nth-child(7){
+    left: 50%;
+    font-size: 5em;
+    animation-delay: 0s;
+    animation-duration: 10s;
+  }
+  
+  @keyframes animate{
+    0%{
+      transform: translateY(0px) rotate(0deg);
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-100px) rotate(360deg);
+      opacity: 0;
+    }
+  }

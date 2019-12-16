@@ -1,38 +1,394 @@
-.App {
+body, html {
+  scroll-behavior: smooth;
+  margin: 0%;
+  padding: 0%;
+  color: #45f3ff;
   text-align: center;
+  width: 100%;
+  height:auto;
+  min-height:100vh;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  background: #111111;  /* fallback for old browsers */
+    }
+
+/* //////////////////////////////////////////// home component below */
+
+h2{
+  font-family: 'Oswald', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
+.avatar{
+  width: 30%;
+  height: auto;
+}
+
+.home{
+  border: none;
+  font-size: 12px;
+  /* min-height: 50vh; */
+  height:auto;
+  padding-top:15%;
+  padding-bottom: 5%;
+}
+
+.card{
+  border:none;
+  margin:auto;
+  width:70%;
+  background: transparent;
+  padding:1%;
+  transition:0.5s;
+}
+
+.title{
+  padding-bottom: 2%;
+}
+
+
+
+.name{
+  text-shadow: 0px 5px 5px red;
+  font-family: 'Lilita One', cursive;
+  padding-top: 10px;
+}
+
+.front{
+  background-color: #ffc400;
+  color: black;
+  transition: 0.5s;
+}
+
+
+.back p{
+  margin-top: 2%;
+}
+
+.back{
+  position: relative;
+  opacity:0;
+  transition:0.5s;
+  top:-35px;
+}
+
+
+.front:hover ~ .back{
+  opacity:1;
+  transition:0.5s;
+  top:0;
+  background:#ffc400 ;
+  color:black;
+}
+
+.front:hover, .face:hover +.back{
+  box-shadow: 0px 5px 15px #ffc400;
+  transition: 1s;
+}
+
+
+.arrow{
+  transform: rotate(-180deg);
+  transition:0.5s;
+}
+
+.front:hover .arrow{
+  transform: rotate(0deg);
+  transition:0.5s;
+}
+
+.front:hover .skill{
+  color: green;
+}
+
+.skills, .about{
+  font-size: 1.5em;
+}
+
+.skills{
+  margin:auto;
+}
+
+.skills i{
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+
+/* /////////////////////////////////////////////////////// project component below */
+
+.section2{
+  background: #ffc400;
+  text-align: center;
+  padding:5%;
+  width: 70%;
+  margin-left:auto;
+  margin-right: auto;
+  font-size: 12px;
+}
+
+.carouselCostum{
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.projects h2{
+  color:black;
+}
+
+
+.project img{
+  margin-bottom: 15px;
+}
+
+.demobtn{
+  width:40%;
+  float: left;
+  margin-left:5%;
+  margin-bottom: 5%;
+}
+
+.codebtn{
+  margin-right: 5%;
+  width:40%;
+  float: right;
+  margin-bottom: 5%;
+}
+
+/*////////////////////////////////////////////////////////////////////////// contact component below */
+
+.section3{
+  margin: auto;
+  width:90%;
+  padding:100px;
+}
+
+form{
+  color:#45f3ff;
+  display: block;
+  padding-left:10%;
+  padding-right:10%;
+}
+
+.inputBox, .textarea{
+  margin-top:60px;
+  position: relative;
+  transition: 0.5s;
+  width: 100%;
+  text-align: left;
+}
+
+.inputBox input, .textarea textarea{
+  position: absolute;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  z-index: 1;
+  color: black;
+  width:100%;
+}
+
+.inputBox .text{
+  position: relative;
+  top: 0;
+  left: 0%;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 1%;
+  transition: 0.5s;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputBox input:focus ~ .text,
+.inputBox input:valid ~ .text{
+  top:-35px;
+  /* left:-10px; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.line{
+  position: absolute;
+  bottom: 0%;
+  left:0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
 }
 
-.App-link {
-  color: #61dafb;
+.inputBox input:focus ~ .line,
+.inputBox input:valid ~ .line{
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.textarea{
+  height: 100px !important;
+  padding: 1%;
+}
+
+.textarea textarea{
+  height: 100%;
+  resize: none;
+}
+
+.textarea .text{
+  position: relative;
+  top: 0;
+  left: 0%;
+  line-height: 140px;
+  font-size: 18px;
+  padding: 1%;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.textarea textarea:focus ~ .text,
+.textarea textarea:valid ~ .text{
+  top:-100px;
+  /* left:-10px; */
+}
+
+.textarea textarea:focus ~ .line,
+.textarea textarea:valid ~ .line{
+  height: 100%;
+}
+
+
+form button{
+  margin-top: 3%;
+  float: left;
+  padding: 1%;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #45f3ff;
+  background: transparent;
+  color: #45f3ff;
+  font-size: 18px;
+  border-radius: 5px 5px 5px 5px;
+  width: 100%;
+  transition: 0.5s;
+}
+
+form button:hover {
+  background: #45f3ff;
+  color: black;
+  transition: 0.5s;
+}
+
+/*////////////////////////////////////////////////////////////////////////// navbar below */
+
+nav{
+ z-index: 5;
+}
+
+nav ul {
+  /* removing bullets, margins and padding for navigation bar */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /*background color of navigaton bar */
+  overflow: hidden;
+  background: rgba(255, 174, 0, 0.9);
+  /* fixed top, also when user scrolls the page */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  /* formatting links in the navigation bar*/
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+nav li a:hover:not(.active) {
+  /*changing the link color on non active links on hover*/
+  background-color: black;
+  color:#ffc400;
+  transition: 0.5s;
+}
+.active {
+  /*showing to user which link is active*/
+  background-color: #000000;
+  color:#ffc400;
+  text-decoration: none;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+  text-decoration: none;
+  color: black;
+  background: rgba(255, 174, 0, 0.9);  text-align: center;
+  padding: 10px 0;
+  display: none;
+  margin: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+  display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+  display: block;
+}
+
+/*///////////////////////////////////////////////////////////////////////////  footer below */
+
+.footer{
+  background: #ffc400;
+  min-height:20vh;
+  color: black;
+  font-size:5em;
+}
+
+/*/////////////////////////////////////////////////////////////////////// media queries below  */
+
+@media screen and (max-width: 800px) {
+  .card ,.section2, .section3{
+    width:100%;
+    padding:0;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul {
+    position: fixed;
+    display: none;
+    margin-top: 37px;
   }
+
+  #show-menu:checked + nav ul {
+    display: block;
+  }
+  /*Create vertical spacing*/
+  nav li {
+    margin-bottom: 1px;
+    width: 100%;
+    margin: 0;
+
+  }
+  /*Make all menu links full width*/
+  nav ul li, nav li a {
+    width: 100%;
+  }
+  /*Display 'show menu' link*/
+  .show-menu {
+    display:block;
+  }
+
 }
