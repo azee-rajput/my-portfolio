@@ -33,13 +33,13 @@ export default class Contact extends React.Component {
                 <div className="inputBox col-sm-12">
                     <input type="email" name="email" required="required"/>
                     <span className="text">Your Email</span>
-                    <spna className="line"></spna>
+                    <span className="line"></span>
                 </div>
                 
                 <div className="textarea col-sm-12">
                     <textarea name="message" required="required"></textarea>
                     <span className="text">Your Message Here...</span>
-                    <spna className="line"></spna>
+                    <span className="line"></span>
                 </div>
 
                 {status === "SUCCESS" ? <p>Thanks!</p> : <button>Send <i className="fas fa-envelope"></i></button>}

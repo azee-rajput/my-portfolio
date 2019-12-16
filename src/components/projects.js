@@ -11,7 +11,7 @@ class Projects extends Component{
             <div className="projects col-sm-12" id="projects">
                 <h2 className="mb-5">Some of My Works</h2>
                 <div className="carouselCostum">
-                    <Carousel autoPlay="true" infiniteLoop="true" transitionTime="300">
+                    <Carousel autoPlay={true} infiniteLoop={true} transitionTime={300}>
                         
                             <div className="project">
                                 <img src={require('../img/weatherreact.png')} alt="avatar"/>

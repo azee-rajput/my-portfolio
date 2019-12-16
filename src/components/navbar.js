@@ -13,7 +13,7 @@ export default class Navbar extends Component{
                     <li><a className="active" href="#">HOME</a></li>
                     <li><a href="#projects">PROJECTS</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-                    <li><a href={Pdf} target="_blank">RESUME</a></li>
+                    <li><a href={Pdf} rel="noopener noreferrer" target="_blank">RESUME</a></li>
                 </ul>
                 </nav>
             </div>
