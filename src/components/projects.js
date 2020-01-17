@@ -12,6 +12,15 @@ class Projects extends Component{
                 <h2 className="mb-5">Some of My Works</h2>
                 <div className="carouselCostum">
                     <Carousel autoPlay={true} infiniteLoop={true} transitionTime={300}>
+
+                            <div className="project">
+                                <img src={require('../img/watch2ni8.png')} alt="avatar"/>
+                                <h4>watch2ni8</h4>
+                                <p>A movie and tv shows browsing website consuming REST APIs from <a href="themoviedb.org" target="_blank" rel="noopener noreferrer">themoviedbp.org</a></p>
+                                <a className="btn btn-outline-primary demobtn" href="https://angry-saha-53e493.netlify.com/" target="_blank" rel="noopener noreferrer">Demo</a>                             
+                                <a className="btn btn-outline-primary codebtn" href="https://github.com/azee-rajput/watch2ni8" target="_blank" rel="noopener noreferrer">Code</a>
+                                <br/><br/>
+                            </div>
                         
                             <div className="project">
                                 <img src={require('../img/weatherreact.png')} alt="avatar"/>
